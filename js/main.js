@@ -1,5 +1,8 @@
-if(document.documentElement.clientWidth < 767) {
 
+const changer = function () {
+console.log('изменился размер окна')
+if (document.documentElement.clientWidth < 767) {
+  console.log('меньше 767');
 
   const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -26,6 +29,7 @@ if(document.documentElement.clientWidth < 767) {
   });
 
 } else {
+  console.log('больше 767');
   let buttonOpen = document.querySelector('.footer__open');
   let buttonClose = document.querySelector('.footer__close');
   let swiper = document.querySelector('.swiper-wrapper');
@@ -42,4 +46,11 @@ if(document.documentElement.clientWidth < 767) {
       buttonClose.classList.add('hide');
   })
 }
+
+}
+
+window.addEventListener('resize', changer());
+
+changer();
+
 
