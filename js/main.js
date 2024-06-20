@@ -1,7 +1,7 @@
 
 const changer = function () {
 console.log('изменился размер окна')
-if (document.documentElement.clientWidth < 767) {
+if (document.documentElement.clientWidth < 767.98) {
   console.log('меньше 767');
 
   const swiper = new Swiper('.swiper', {
@@ -46,11 +46,8 @@ if (document.documentElement.clientWidth < 767) {
       buttonClose.classList.add('hide');
   })
 }
-
 }
-
-window.addEventListener('resize', changer());
 
 changer();
 
-
+window.addEventListener('resize', changer());
