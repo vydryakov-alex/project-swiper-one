@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    /* box-sizing: inherit; */
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    /* scroll-behavior: smooth; */
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+menu,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+body {
+    font-family: "TT Lakes", sans-serif;
+    color: #1b1c21;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #f8f8f8;
+
+    width: 320px;
+    border: 1px solid black;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    background-image: url("../img/icon-go.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header {
+    background-image: linear-gradient(to right, #f8f8f8, #fff);
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 40px;
+}
+
+.heder__title {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+}
+
+.img {
+    /* height: 72px; */
+    object-fit: none;
+}
+
+.swiper {
+    /* width: 240px; */
+    height: 138px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.swiper::after {
+    content: "";
+    width: 24px;
+    height: 81px;
+    position: absolute;
+    right: 0;
+    top: -9px;
+    background-image: linear-gradient(to right, #f8f8f800 0%, #f8f8f8 75%);
+    /* background-color: red; */
+    z-index: 10;
+}
+
+.swiper-wrapper {
+}
+.swiper-slide {
+    /* width: 240px !important; */
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 0 16px;
+
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:root {
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-color: #b5b6bc;
+    --swiper-pagination-bullet-inactive-color: #dddddd;
+    /* --swiper-pagination-top: 0px; */
+    --swiper-pagination-bottom: 30px;
+}
+
+.swiper-pagination {
+}
