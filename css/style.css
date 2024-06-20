@@ -41,10 +41,25 @@ body {
     font-size: 16px;
     background-color: #f8f8f8;
     width: 320px;
+    /* удалить  */
 }
 
-.container {
-    padding: 0 16px;
+@media (min-width: 768px) {
+    .container {
+        min-width: 768px;
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .container {
+        min-width: 1120px;
+        padding: 0 32px;
+    }
+}
+
+.hide {
+    display: none;
 }
 
 .icon {
@@ -60,6 +75,7 @@ body {
     margin: 0 auto;
     margin-top: 16px;
     margin-bottom: 40px;
+    padding: 0 16px;
 }
 
 .heder__title {
@@ -75,9 +91,9 @@ body {
 }
 
 .swiper {
-    height: 138px;
     padding-left: 16px;
     position: relative;
+    height: 138px;
 }
 
 .swiper::after {
@@ -98,7 +114,6 @@ body {
     border: 1px solid #eaeaea;
     border-radius: 6px;
     padding: 0 16px;
-    text-align: center;
     font-size: 18px;
     background: #fff;
     display: flex;
@@ -109,7 +124,100 @@ body {
 :root {
     --swiper-pagination-bullet-size: 12px;
     --swiper-pagination-color: #b5b6bc;
+    /* --swiper-pagination-color: #132aa8; */
+
     --swiper-pagination-bullet-inactive-color: #dddddd;
     --swiper-pagination-bottom: 30px;
 }
 
+/* --------------- swiper tablet+ ------------- */
+@media (min-width: 768px) {
+    .swiper {
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .swiper-wrapper--height {
+        height: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+    .swiper-wrapper {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        row-gap: 16px;
+        margin-bottom: 24px;
+        gap: 16px 24px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1120px) {
+    .swiper-wrapper {
+        gap: 16px 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .swiper-slide {
+        width: 224px;
+        padding: 16px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .swiper-slide {
+        width: 240px;
+    }
+}
+/* --------------- //swiper tablet+ ------------- */
+
+/* --------------- footer ------------- */
+.footer {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: block;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.footer__text {
+    padding-left: 23px;
+    cursor: pointer;
+}
+.footer__open {
+    position: relative;
+}
+.footer__open::before {
+    width: 8px;
+    height: 11px;
+    background-image: url("../img/icon-open.svg");
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.footer__close {
+    /* display: none; */
+    position: relative;
+}
+
+.footer__close::before {
+    width: 8px;
+    height: 11px;
+    background-image: url("../img/icon-close.svg");
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+/* --------------- //footer ------------- */
