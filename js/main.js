@@ -50,4 +50,4 @@ if (document.documentElement.clientWidth < 767.98) {
 
 changer();
 
-window.addEventListener('resize', changer());
+// window.addEventListener('resize', changer());
